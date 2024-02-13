@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <div class="containerOverlay">
+    
+     </div>    
+
+    <!-- Container -->
+<div class="container">
+
+    <!-- Header  -->
+    <div class='headerContainer'>
+        <div class='leftDiv'>
+            <img src="./public/img/logo.svg" alt="Logo" class='logo' />
+            <ul> 
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class='avatar'>
+            <div class='cartcontainer' >
+                <img src="./public/img/icon-cart.svg"  class='cartIcon' id="cartIcon" alt="cart-icon"/>
+                <img src="./public/img/icon-menu.svg" alt="menu" class="menuIcon" />
+            </div>
+
+
+
+            <span class='notification' name="notification"></span>
+            <div class='profilePicContainer'>
+                <img src="./public/img/image-avatar.png" alt="profile-pic" class='profile'/>
+            </div>
+            
+            <!-- CARTBOX ACTIVE -->
+
+            <div class='cartBox'> 
+                <span class="closeCartBox" data-action="closeCart">x</span>
+                <div class='cartBoxTitle'>
+                    Cart
+                </div>
+
+                <div class='cartBoxEl'>
+                    <!-- <div class="emptyCart">  </div> -->
+                    <button class='cartbutton'>Checkout</button>
+                </div>
+
+
+            </div>
+      
+        </div>
+        <div class='shrink-menu'> 
+            <ul>
+                <li><a>Collections</a></li>
+                <li><a>Men</a></li>
+                <li><a>Women</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+    </div>
+    </div>
+
+    <!-- Container gallery and description -->
+    <div class="containerDescriptionGallery"> 
+    <!-- Product Gallery -->
+
+    <div class="containerGallery">
+        <div class="box1">
+            <div class='heroImg'>
+            <div>
+                <img src=./public/img/image-product-1.jpg
+                alt="productPhoto"
+                class='hero onPageGallery'
+                />
+            </div>
+            <i
+                class='fa-solid fa-angle-left arrowLeft'
+                data-action="left"
+            ></i>
+            <i class='fa-solid fa-angle-right arrowRight'
+                data-action="right"
+            ></i>
+            </div>
+    
+            <div class='smallContainer onPage'>
+                <img class="small" src="./public/img/image-product-1-thumbnail.jpg" />
+                <img class="small" src="./public/img/image-product-2-thumbnail.jpg" />
+                <img class="small" src="./public/img/image-product-3-thumbnail.jpg" />
+                <img class="small" src="./public/img/image-product-4-thumbnail.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Description -->
+
+    <div class="containerDescription"> 
+        <div class="box2"> 
+          <p class="titleSmall">Sneaker Company</p>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+          <div class="priceDetails"> 
+            <h2>$125.00</h2> <span>50%</span>
+          </div>
+          <p class="oldPrice">$250.00</p>
+  
+          <div class="cartContainerButton"> 
+            <div class="btnQuantity">
+              <button class="minus" name="minus" >-</button>
+              <span class="number"></span>
+              <button class="plus" name="plus" >+</button>
+            </div>
+            <button class="cartbuttonProduct" name="addToCart">Add to cart</span></button>
+          </div>
+        </div>
+    <!-- </div> -->
+
+    </div>
+    <!-- End of Container div-->
+    </div>
+
+    
+    <script defer src="product.js"></script>
+</body>
+</html>

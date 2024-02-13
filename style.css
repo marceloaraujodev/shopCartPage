@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Kumbh Sans, sans-serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+    flex-direction: column;
+    /* width: 900px; */
+}
+.headerContainer{
+    display: flex;
+    width: 900px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    box-sizing: border-box;
+    position: relative;
+}
+.leftDiv{
+    display: flex;
+    align-items: center; 
+}
+.leftDiv ul{
+    display: flex;  
+    width: 400px;
+    justify-content: space-between;
+    margin-left: 50px; 
+}
+.leftDiv li{
+    display: flex;
+    list-style-type: none;
+    vertical-align: bottom;
+    align-items:flex-end;
+    font-size: 1.1rem;
+}
+.leftDiv a{
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+.logo{
+    width: 110px;
+}
+.shrink-menu{
+    border: solid 1px rgb(207, 207, 207);
+    position: absolute;
+    z-index: 200;
+    top: 55px;
+    right: 80px;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    border-radius: 5px;
+    display: none;
+}
+.shrink-menu ul{
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    list-style-type: none;
+    text-decoration: none;
+}
+.shrink-menu ul li{
+    flex: 1;
+    padding: 10px;
+}
+.shrink-menu ul li{
+    cursor: pointer;
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.avatar:hover{
+    cursor: pointer;
+}
+.cartIcon{
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+}
+.menuIcon{
+    display: none;
+}
+
+.profilePicContainer{
+    position: relative;
+    margin-left: 10px;
+}
+.profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.profile:hover{
+    outline: 2px solid hsla(26, 100%, 55%, 0.856);
+    box-sizing: border-box;
+}
+.notification{
+    position: absolute;
+    height: 12px;
+    width: 18px;
+    border-radius: 40%;
+    text-align: center;
+    background-color: hsla(26, 100%, 55%, 0.838);
+    color: white;
+    font-size: .6rem;
+    top: 0px;
+    left: -12px;
+    line-height: 12px;
+    display: none;
+}
+
+/* uncomment display to see cartBox with buttons and items */
+.cartBox{
+    position: absolute;
+    width: 300px;
+    z-index: 1000;
+    top: 20px;
+    right: 70px;
+    box-shadow: 6px 3px 6px rgba(104, 104, 104, 0.208);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 9px 20px rgba(167, 167, 167, 0.685);
+    display: none;
+}
+.active{
+    display: block;
+}
+
+.cartBoxTitle{
+    border-bottom: 1px solid rgb(229, 229, 229);
+    height: 20px;
+    padding: 15px;
+    color: rgb(26, 26, 26);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.cartBoxEl {   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: rgb(137, 136, 136);
+}
+.emptyCart{
+    margin-top: 20px;
+}
+.cartContainerProductsDescription{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+.cartItemPic{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+.cartContentDescription{
+    padding: 6px;
+    margin-left: 4px;
+}
+.cartTrash{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.cartbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 50px;
+    border: none;
+    padding: 15px 20px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+.closeCartBox{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 100;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: hsl(26, 80%, 50%);
+}
+
+
+/* Gallery below */
+
+.containerDescriptionGallery{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    margin: auto;
+    margin-top: 50px;
+    flex-direction: row;
+}
+.box1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.hero{
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+}
+.heroImg{
+    position: relative;
+}
+.arrowLeft{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    opacity: 50%;
+    font-size: 30px;
+    left: 5px;
+}
+.arrowLeft:hover{
+    cursor: pointer;
+}
+.arrowRight{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: white;
+    opacity: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Description */
+.box2 {
+    width: 400px; 
+}
+.smallContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.smallContainer img{
+    cursor: pointer;
+}
+.small{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.titleSmall{
+    color: hsl(26, 100%, 55%);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.box2 h1{
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.description{
+    margin-bottom: 20px;
+}
+.priceDetails {
+display: flex;
+}
+.priceDetails span{
+    margin-left: 15px;
+    background-color: hsl(35, 100%, 89%);
+    color: hsl(26, 100%, 55%);
+    border-radius: 5px;
+    align-self: center;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+}
+
+.oldPrice{
+    margin: 3px 0 30px 0;
+    text-decoration: line-through;
+    color: rgb(166, 166, 166);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.cartContainerButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.cartbuttonProduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 54px;
+    border: none;
+    padding: 15px 20px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 6px hsla(26, 100%, 55%, 0.646);
+}
+.box2 button:hover{
+    background-color: hsl(26, 100%, 59%);
+    cursor: pointer;
+}
+.cartbuttonProduct span{
+    margin-left: 10px;
+}
+.btnQuantity{
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    /* width: 40px; */
+    border: none;
+    height: 54px;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+    border-radius: 5px;
+}
+.btnQuantity button{
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.btnQuantity button:hover{
+    cursor: pointer;
+}
+.btnQuantity span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.btnQuantity button:hover{
+    background-color: hsl(223, 64%, 98%);
+}
+.minus{
+    width: 40px;
+    height: 54px;
+}
+.plus{
+    width: 40px;
+    height: 54px;
+}
+.number{
+    width: 40px;
+    height: 54px;
+}
+
+/* Overlay style */
+.overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 2;
+}
+.activeOverlay{
+    display: flex;
+}
+.box1.heroImgOverlayBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* controls width bigger img */
+.heroImg.heroImgOverlay{
+    width: 800px;
+    border-radius: 10px; 
+}
+.hero.heroOverlay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    height: 100%;
+}
+.arrowLeft.arrowLeftOverlay{
+    position: absolute;
+    left: -60px;
+    color: white;
+    font-size: 60px;
+
+}
+.arrowRight.arrowRightOverlay{
+    position: absolute;
+    right: -60px;
+    color: white;
+    font-size: 80px;
+}
+.smallContainer.overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -100px; /* Align the thumbnails at the bottom of the hero image */
+    width: 100%; /* Full width */
+    height: 100px; /* Set a fixed height for the thumbnails */
+    background: rgba(0, 0, 0, 0); /* Add a background color or adjust transparency */
+}
+.smallContainer.overlay img{
+    cursor: pointer;
+    margin-left: 20px;
+    
+}
+
+.closeOverlay{
+    position: absolute;
+    top: -35px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 820px) {
+    .headerContainer{
+        width: 100%;
+        /* padding: 20px 70px */
+    }
+    .menuIcon{
+        display: inline;
+    }
+    .titleSmall {
+        /* font-size: 1.5rem;
+        font-weight: bold; */
+    }
+    .containerDescriptionGallery {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-bottom: 50px;
+    }
+    .box1{
+        width: 90%;
+        margin: auto;
+    }
+    .heroImg div{
+        text-align: center;
+    }
+    .hero{
+        width: 100%;
+        height: 100%;
+    }
+    .arrowLeft{
+        left: 6px
+    }
+    .arrowRight{
+        right: 6px;
+    }
+    .leftDiv ul{
+        display: none;
+    }
+    .smallContainer{
+        display: flex;
+        width: 100%;
+    }
+    .box2{
+        margin-top: 80px;
+        width: 90%;
+        margin: auto;
+    }
+}
